@@ -16,7 +16,7 @@ export const About: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
                 <img 
-                    src="/assets/img/profile_picture.png" 
+                    src="https://raw.githubusercontent.com/me-pankajmunde/AIML_Portfolio/refs/heads/main/assets/img/profile_picture.png" 
                     alt="Pankaj Munde" 
                     className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
