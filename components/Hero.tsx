@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
-          AI/ML Associate & <br/>
+          AI/ML Lead & <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Deep Learning Specialist</span>
         </h1>
 

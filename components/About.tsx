@@ -3,9 +3,9 @@ import { SectionId } from '../types';
 import { Code2, Cpu, Globe } from 'lucide-react';
 
 const stats = [
-  { label: 'Years Experience', value: '6+' },
-  { label: 'Key Projects', value: '10+' },
-  { label: 'Efficiency Gain', value: '35%' },
+  { label: 'Years Experience', value: '7+' },
+  { label: 'Key Projects', value: '15+' },
+  { label: 'Efficiency Gain', value: '45%' },
 ];
 
 export const About: React.FC = () => {
@@ -16,7 +16,7 @@ export const About: React.FC = () => {
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
                 <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" 
+                    src="/assets/img/profile_picture.png" 
                     alt="Pankaj Munde" 
                     className="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
                 />
@@ -34,10 +34,10 @@ export const About: React.FC = () => {
               <span className="text-secondary">Real-World Application</span>
             </h2>
             <p className="text-slate-400 text-lg mb-6 leading-relaxed">
-              With over 6 years of experience in the field, I specialize in Computer Vision, Deep Learning, and NLP. My journey has been defined by developing and deploying AI solutions that tackle tangible problems in sectors like Agriculture and Retail.
+              With over 7 years of experience in the field, I specialize in Computer Vision, Deep Learning, and NLP. My journey has been defined by developing and deploying AI solutions that tackle tangible problems in sectors like Agriculture and Retail.
             </p>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-              Currently an Associate in AI/ML at Shivrai Technologies, I focus on advanced model development—from optimizing satellite imagery analysis to finetuning Large Language Models (LLMs) for specialized tasks like RAG and digital expert systems.
+              Currently a Technical Lead in AI/ML at Shivrai Technologies, I focus on advanced model development—from optimizing satellite imagery analysis to finetuning Large Language Models (LLMs) for specialized tasks like RAG and digital expert systems.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-10">

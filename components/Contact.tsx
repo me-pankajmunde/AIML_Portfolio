@@ -16,10 +16,10 @@ export const Contact: React.FC = () => {
             </p>
 
             <div className="flex justify-center gap-6 mb-12">
-                <SocialLink href="mailto:contact@pankajmunde.in" icon={<Mail size={24} />} label="Email" />
-                <SocialLink href="https://linkedin.com" icon={<Linkedin size={24} />} label="LinkedIn" />
-                <SocialLink href="https://github.com" icon={<Github size={24} />} label="GitHub" />
-                <SocialLink href="https://twitter.com" icon={<Twitter size={24} />} label="Twitter" />
+                <SocialLink href="mailto:pmunde.connect@gmail.com" icon={<Mail size={24} />} label="Email" />
+                <SocialLink href="https://www.linkedin.com/in/pankaj-munde-61bb8b160" icon={<Linkedin size={24} />} label="LinkedIn" />
+                <SocialLink href="https://github.com/me-pankajmunde" icon={<Github size={24} />} label="GitHub" />
+                {/* <SocialLink href="https://twitter.com" icon={<Twitter size={24} />} label="Twitter" /> */}
             </div>
 
             <div className="p-8 rounded-2xl bg-slate-800/30 border border-slate-700 backdrop-blur-sm">
@@ -27,7 +27,7 @@ export const Contact: React.FC = () => {
                     "The true measure of technology is the number of lives it touches."
                 </p>
                 <a 
-                    href="mailto:contact@pankajmunde.in"
+                    href="mailto:pmunde.connect@gmail.com"
                     className="inline-block px-8 py-4 rounded-lg bg-white text-slate-900 font-bold hover:bg-slate-200 transition-colors"
                 >
                     Get in Touch
@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
             </div>
 
              <div className="mt-20 pt-8 border-t border-slate-800 text-sm text-slate-600">
-                <p>© {new Date().getFullYear()} Pankaj Munde. Built with React, Tailwind & Gemini.</p>
+                <p>© {new Date().getFullYear()} Pankaj Munde</p>
             </div>
         </div>
     </section>

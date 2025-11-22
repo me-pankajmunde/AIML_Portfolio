@@ -24,7 +24,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tighter">
             <Terminal className="text-primary" size={24} />
-            <span>PANKAJ<span className="text-primary">.AI</span></span>
+            <span>PM<span className="text-primary">.AI</span></span>
           </div>
 
           {/* Desktop Nav */}

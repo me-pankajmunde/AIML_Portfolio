@@ -14,7 +14,7 @@ export const Projects: React.FC = () => {
                     A selection of work ranging from scalable ML infrastructure to experimental AI applications.
                 </p>
             </div>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-primary hover:text-white transition-colors flex items-center gap-2">
+            <a href="https://github.com/me-pankajmunde" target="_blank" rel="noreferrer" className="text-primary hover:text-white transition-colors flex items-center gap-2">
                 View GitHub Profile <ArrowRightIcon />
             </a>
         </div>
@@ -49,7 +49,7 @@ export const Projects: React.FC = () => {
                             ))}
                         </div>
 
-                        <div className="flex items-center gap-4 mt-auto">
+                        {/* <div className="flex items-center gap-4 mt-auto">
                             {project.githubUrl && (
                                 <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-1 text-sm text-slate-300 hover:text-white transition-colors">
                                     <Github size={16} /> Code
@@ -60,7 +60,7 @@ export const Projects: React.FC = () => {
                                     <ExternalLink size={16} /> Live Demo
                                 </a>
                             )}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             ))}
