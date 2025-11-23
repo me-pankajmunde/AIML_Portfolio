@@ -15,6 +15,7 @@ export interface Demo {
   category: string;
   embedUrl: string;
   thumbnailUrl?: string;
+  tags?: string[];
 }
 
 export interface Skill {

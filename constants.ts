@@ -96,7 +96,8 @@ export const DEMOS: Demo[] = [
     description: 'Real-time image classification using ResNet50. Upload an image to see the model predict the class probabilities.',
     category: 'Computer Vision',
     embedUrl: 'https://gradio.app/', // Placeholder, user should replace with actual HF Space URL
-    thumbnailUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800'
+    thumbnailUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800',
+    tags: ['ResNet50', 'PyTorch', 'Gradio']
   },
   {
     id: '2',
@@ -104,7 +105,8 @@ export const DEMOS: Demo[] = [
     description: 'Analyze the sentiment of your text using a fine-tuned BERT model. Supports positive, negative, and neutral classification.',
     category: 'NLP',
     embedUrl: 'https://gradio.app/', // Placeholder
-    thumbnailUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+    thumbnailUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800',
+    tags: ['BERT', 'Transformers', 'NLP']
   },
   {
     id: '3',
@@ -112,7 +114,8 @@ export const DEMOS: Demo[] = [
     description: 'YOLOv8 based object detection in images and videos. Identifies multiple objects with bounding boxes.',
     category: 'Computer Vision',
     embedUrl: 'https://gradio.app/', // Placeholder
-    thumbnailUrl: 'https://images.unsplash.com/photo-1535378437268-13d673d2345c?auto=format&fit=crop&q=80&w=800'
+    thumbnailUrl: 'https://images.unsplash.com/photo-1535378437268-13d673d2345c?auto=format&fit=crop&q=80&w=800',
+    tags: ['YOLOv8', 'Object Detection', 'Computer Vision']
   },
   {
     id: '4',
@@ -120,6 +123,16 @@ export const DEMOS: Demo[] = [
     description: 'Interactive chat interface powered by Llama-2. Ask questions and get responses in real-time.',
     category: 'GenAI',
     embedUrl: 'https://gradio.app/', // Placeholder
-    thumbnailUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800'
+    thumbnailUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800',
+    tags: ['Llama-2', 'LLM', 'Chatbot']
+  },
+    {
+    id: '5',
+    title: 'MedSenseAI',
+    description: 'MedSense is an intelligent medicine search and recommendation system that helps users find similar medicines based on semantic search.',
+    category: 'GenAI',
+    embedUrl: 'https://pankaj-munde-medsense.hf.space', // Placeholder
+    thumbnailUrl: 'https://plus.unsplash.com/premium_photo-1668487826666-baa00865bc13?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    tags: ['gemini-flash', 'embeddinggemma', 'HuggingFace', 'RAG', 'Langchain', 'Langgraph', 'Pinecone', 'Gradio']
   }
 ];

@@ -46,7 +46,16 @@ export const Demos: React.FC = () => {
             <div key={demo.id} className="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 flex flex-col">
               <div className="p-6 border-b border-slate-700">
                 <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
-                <p className="text-slate-400 text-sm">{demo.description}</p>
+                <p className="text-slate-400 text-sm mb-4">{demo.description}</p>
+                {demo.tags && (
+                  <div className="flex flex-wrap gap-2">
+                    {demo.tags.map(tag => (
+                      <span key={tag} className="text-xs font-medium px-2 py-1 rounded-md bg-slate-900 text-slate-400 border border-slate-800">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
               
               <div className="relative bg-slate-900 h-60 w- group cursor-pointer" onClick={() => setSelectedDemo(demo.id)}>
