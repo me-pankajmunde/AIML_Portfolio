@@ -8,6 +8,15 @@ export interface Project {
   demoUrl?: string;
 }
 
+export interface Demo {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  embedUrl: string;
+  thumbnailUrl?: string;
+}
+
 export interface Skill {
   category: string;
   items: string[];
@@ -30,5 +39,6 @@ export enum SectionId {
   ABOUT = 'about',
   SKILLS = 'skills',
   PROJECTS = 'projects',
+  DEMOS = 'demos',
   CONTACT = 'contact'
 }

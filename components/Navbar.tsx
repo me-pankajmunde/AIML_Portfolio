@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Terminal } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,32 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1);
+      if (location.pathname === '/') {
+        const element = document.querySelector(hash);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    } else {
+      navigate(href);
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -22,7 +51,10 @@ export const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2 text-white font-bold text-xl tracking-tighter">
+          <div 
+            className="flex items-center gap-2 text-white font-bold text-xl tracking-tighter cursor-pointer"
+            onClick={() => navigate('/')}
+          >
             <Terminal className="text-primary" size={24} />
             <span>PM<span className="text-primary">.AI</span></span>
           </div>
@@ -33,6 +65,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-sm font-medium text-slate-300 hover:text-primary transition-colors"
               >
                 {link.name}
@@ -60,7 +93,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800"
               >
                 {link.name}

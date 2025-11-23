@@ -1,11 +1,12 @@
-import { Project, RadarDataPoint, SectionId, Skill } from './types';
+import { Project, RadarDataPoint, SectionId, Skill, Demo } from './types';
 
 export const NAV_LINKS = [
-  { name: 'Home', href: `#${SectionId.HERO}` },
-  { name: 'About', href: `#${SectionId.ABOUT}` },
-  { name: 'Skills', href: `#${SectionId.SKILLS}` },
-  { name: 'Projects', href: `#${SectionId.PROJECTS}` },
-  { name: 'Contact', href: `#${SectionId.CONTACT}` },
+  { name: 'Home', href: `/#${SectionId.HERO}` },
+  { name: 'About', href: `/#${SectionId.ABOUT}` },
+  { name: 'Skills', href: `/#${SectionId.SKILLS}` },
+  { name: 'Projects', href: `/#${SectionId.PROJECTS}` },
+  { name: 'Demos', href: `/demos` },
+  { name: 'Contact', href: `/#${SectionId.CONTACT}` },
 ];
 
 export const RESUME_CONTEXT = `
@@ -86,4 +87,39 @@ export const RADAR_DATA: RadarDataPoint[] = [
   { subject: 'System Design', A: 85, fullMark: 100 },
   { subject: 'Data Eng', A: 80, fullMark: 100 },
   { subject: 'Deployment', A: 88, fullMark: 100 },
+];
+
+export const DEMOS: Demo[] = [
+  {
+    id: '1',
+    title: 'Image Classification',
+    description: 'Real-time image classification using ResNet50. Upload an image to see the model predict the class probabilities.',
+    category: 'Computer Vision',
+    embedUrl: 'https://gradio.app/', // Placeholder, user should replace with actual HF Space URL
+    thumbnailUrl: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '2',
+    title: 'Sentiment Analysis',
+    description: 'Analyze the sentiment of your text using a fine-tuned BERT model. Supports positive, negative, and neutral classification.',
+    category: 'NLP',
+    embedUrl: 'https://gradio.app/', // Placeholder
+    thumbnailUrl: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '3',
+    title: 'Object Detection',
+    description: 'YOLOv8 based object detection in images and videos. Identifies multiple objects with bounding boxes.',
+    category: 'Computer Vision',
+    embedUrl: 'https://gradio.app/', // Placeholder
+    thumbnailUrl: 'https://images.unsplash.com/photo-1535378437268-13d673d2345c?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '4',
+    title: 'Chat with LLM',
+    description: 'Interactive chat interface powered by Llama-2. Ask questions and get responses in real-time.',
+    category: 'GenAI',
+    embedUrl: 'https://gradio.app/', // Placeholder
+    thumbnailUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800'
+  }
 ];
