@@ -70,7 +70,7 @@ export const Demos: React.FC = () => {
                   <button 
                     className="flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white rounded-full font-bold text-lg transition-all duration-300 transform group-hover:scale-110 shadow-2xl shadow-primary/50 group-hover:shadow-primary/80"
                   >
-                    <Play size={24} fill="currentColor" className="animate-pulse" /> 
+                    <Play size={24} fill="currentColor" /> 
                     Launch Demo
                   </button>
                 </div>
@@ -88,7 +88,12 @@ export const Demos: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
                   {demo.title}
                 </h3>
-                <p className="text-slate-400 text-sm mb-4 line-clamp-2 flex-1">
+                <p className="text-slate-400 text-sm mb-4 flex-1" style={{
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                  overflow: 'hidden'
+                }}>
                   {demo.description}
                 </p>
                 
@@ -129,7 +134,7 @@ export const Demos: React.FC = () => {
       {/* Enhanced Modal */}
       {selectedDemo && currentDemo && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in duration-300" 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity duration-300" 
           onClick={() => setSelectedDemo(null)}
         >
           <div 
