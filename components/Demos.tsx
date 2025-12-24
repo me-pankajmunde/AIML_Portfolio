@@ -6,6 +6,7 @@ export const Demos: React.FC = () => {
   const categories = Array.from(new Set(DEMOS.map(d => d.category)));
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   const [selectedDemo, setSelectedDemo] = useState<string | null>(null);
+  const MAX_VISIBLE_TAGS = 3;
 
   const filteredDemos = DEMOS.filter(d => d.category === activeCategory);
   const currentDemo = DEMOS.find(d => d.id === selectedDemo);
@@ -100,7 +101,7 @@ export const Demos: React.FC = () => {
                 {/* Tags - Compact */}
                 {demo.tags && (
                   <div className="flex flex-wrap gap-1.5 mb-3">
-                    {demo.tags.slice(0, 3).map(tag => (
+                    {demo.tags.slice(0, MAX_VISIBLE_TAGS).map(tag => (
                       <span 
                         key={tag} 
                         className="text-xs font-medium px-2 py-1 rounded-md bg-slate-900/50 text-slate-400 border border-slate-700/50"
@@ -108,9 +109,9 @@ export const Demos: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                    {demo.tags.length > 3 && (
+                    {demo.tags.length > MAX_VISIBLE_TAGS && (
                       <span className="text-xs font-medium px-2 py-1 text-slate-500">
-                        +{demo.tags.length - 3}
+                        +{demo.tags.length - MAX_VISIBLE_TAGS}
                       </span>
                     )}
                   </div>
